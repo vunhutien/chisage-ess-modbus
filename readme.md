@@ -16,7 +16,7 @@ https://prnt.sc/2_JyPX2LfgOI
 - Dùng cọng dây điện 2 chân được tặng kèm trong hộp của Chisage, nối 2 vào chân số 23,24 của biến tần, đầu còn lại đấu vào V+ và V- của Waveshare để cấp nguồn cho nó.
 
 # Cài đặt Waveshare
-- Download phần mềm Vircom Modbus Master tại đây: 
+- Download phần mềm Vircom tại đây: https://github.com/vunhutien/chisage-ess-modbus/blob/main/VirCom_en.zip
 - Xem video 2 phần cài đặt và cấu hình Waveshare
 
 # Cài đặt Home Assistant
