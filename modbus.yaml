@@ -1,0 +1,357 @@
+- name: Chisage ESS
+  type: tcp
+  host: 192.168.1.250
+  port: 502
+
+  sensors:
+    # 75 Load Active Power
+    - name: "Chisage Load Active Power"
+      device_class: power
+      unit_of_measurement: "W"
+      slave: 1
+      address: 75
+      data_type: int16
+      input_type: holding
+      scale: 1
+      offset: 0
+      precision: 0
+
+    # 45 Battery SOC
+    - name: "Chisage Battery SOC"
+      device_class: battery
+      unit_of_measurement: "%"
+      slave: 1
+      address: 45
+      data_type: uint16
+      input_type: holding
+      scale: 1
+      offset: 0
+      precision: 0
+    
+    # 2646 Battery Capacity
+    - name: "Chisage Battery Capacity"
+      unit_of_measurement: "Ah"
+      slave: 1
+      address: 2646
+      data_type: int16
+      input_type: holding
+      scale: 1
+      offset: 0
+      precision: 1
+
+    # 46 Battery Power
+    - name: "Chisage Battery Power"
+      device_class: power
+      unit_of_measurement: "W"
+      slave: 1
+      address: 46
+      data_type: int16
+      input_type: holding
+      scale: 1
+      offset: 0
+      precision: 0
+
+    # 42 Battery Voltage
+    - name: "Chisage Battery Voltage"
+      device_class: voltage
+      unit_of_measurement: "V"
+      slave: 1
+      address: 42
+      data_type: uint16
+      input_type: holding
+      scale: 0.01
+      offset: 0
+      precision: 1
+
+    - name: "Chisage Battery Current"
+      device_class: current
+      unit_of_measurement: "A"
+      slave: 1
+      address: 43
+      data_type: int16
+      input_type: holding
+      scale: 0.01
+      offset: 0
+      precision: 2
+
+    # 65 Inverter Power
+    - name: "Chisage Inverter Power"
+      device_class: power
+      unit_of_measurement: "W"
+      slave: 1
+      address: 65
+      data_type: int16
+      input_type: holding
+      scale: 1
+      offset: 0
+      precision: 0
+
+    - name: "Chisage Inverter Voltage"
+      device_class: voltage
+      unit_of_measurement: "V"
+      slave: 1
+      address: 26
+      data_type: uint16
+      input_type: holding
+      scale: 0.1
+      offset: 0
+      precision: 1
+
+    # 27 Inverter Current
+    - name: "Chisage Inverter Current"
+      device_class: current
+      unit_of_measurement: "A"
+      slave: 1
+      address: 27
+      data_type: int16
+      input_type: holding
+      scale: 0.01
+      offset: 0
+      precision: 1
+
+    # 34 Inverter Frequency
+    - name: "Chisage Inverter Frequency"
+      device_class: frequency
+      unit_of_measurement: "Hz"
+      slave: 1
+      address: 34
+      data_type: uint16
+      input_type: holding
+      scale: 0.01
+      offset: 0
+      precision: 2
+
+    # 69 Grid Power
+    - name: "Chisage Grid Power"
+      device_class: power
+      unit_of_measurement: "W"
+      slave: 1
+      address: 69
+      data_type: int16
+      input_type: holding
+      scale: 1
+      offset: 0
+      precision: 0
+
+    - name: "Chisage PV1 Power"
+      device_class: power
+      unit_of_measurement: "W"
+      slave: 1
+      address: 47
+      data_type: int16
+      input_type: holding
+      scale: 1
+      offset: 0
+      precision: 0
+
+    - name: "Chisage PV2 Power"
+      device_class: power
+      unit_of_measurement: "W"
+      slave: 1
+      address: 48
+      data_type: int16
+      input_type: holding
+      scale: 1
+      offset: 0
+      precision: 0
+
+    - name: "Chisage UPS Power"
+      device_class: power
+      unit_of_measurement: "W"
+      slave: 1
+      address: 67
+      data_type: int16
+      input_type: holding
+      scale: 1
+      offset: 0
+      precision: 0
+
+    - name: "Chisage Smart Load Power"
+      device_class: power
+      unit_of_measurement: "W"
+      slave: 1
+      address: 68
+      data_type: int16
+      input_type: holding
+      scale: 1
+      offset: 0
+      precision: 0
+
+    - name: "Chisage PV1 Current"
+      device_class: current
+      unit_of_measurement: "A"
+      slave: 1
+      address: 39
+      data_type: int16
+      input_type: holding
+      scale: 0.01
+      offset: 0
+      precision: 1
+
+    - name: "Chisage PV2 Current"
+      device_class: current
+      unit_of_measurement: "A"
+      slave: 1
+      address: 41
+      data_type: int16
+      input_type: holding
+      scale: 0.01
+      offset: 0
+      precision: 1
+
+    - name: "Chisage PV1 Voltage"
+      device_class: voltage
+      unit_of_measurement: "V"
+      slave: 1
+      address: 38
+      data_type: uint16
+      input_type: holding
+      scale: 0.1
+      offset: 0
+      precision: 1
+
+    - name: "Chisage PV2 Voltage"
+      device_class: voltage
+      unit_of_measurement: "V"
+      slave: 1
+      address: 40
+      data_type: uint16
+      input_type: holding
+      scale: 0.1
+      offset: 0
+      precision: 1
+
+    - name: "Chisage Grid Current"
+      device_class: current
+      unit_of_measurement: "A"
+      slave: 1
+      address: 31
+      data_type: int16
+      input_type: holding
+      scale: 0.01
+      offset: 0
+      precision: 1
+
+    - name: "Chisage Grid Voltage"
+      device_class: voltage
+      unit_of_measurement: "V"
+      slave: 1
+      address: 30
+      data_type: uint16
+      input_type: holding
+      scale: 0.1
+      offset: 0
+      precision: 1
+
+    - name: "Chisage Battery Radiator Temperature"
+      device_class: temperature
+      unit_of_measurement: "°C"
+      slave: 1
+      address: 2055
+      data_type: int16
+      input_type: holding
+      scale: 1
+      offset: 0
+      precision: 1
+
+    - name: "Chisage Inverter Radiator Temperature"
+      device_class: temperature
+      unit_of_measurement: "°C"
+      slave: 1
+      address: 2056
+      data_type: int16
+      input_type: holding
+      scale: 0.1
+      offset: 0
+      precision: 1
+
+    - name: "Chisage Battery Temperature"
+      device_class: temperature
+      unit_of_measurement: "°C"
+      slave: 1
+      address: 55
+      data_type: int16
+      input_type: holding
+      scale: 0.1
+      offset: 0
+      precision: 1
+
+    - name: "Chisage Inverter Temperature"
+      device_class: temperature
+      unit_of_measurement: "°C"
+      slave: 1
+      address: 56
+      data_type: int16
+      input_type: holding
+      scale: 0.1
+      offset: 0
+      precision: 1
+
+    - name: "Chisage PV Today Power"
+      device_class: power
+      unit_of_measurement: "kW"
+      slave: 1
+      address: 2065
+      data_type: int16
+      input_type: holding
+      scale: 0.1
+      offset: 0
+      precision: 1
+
+    - name: "Chisage Grid Buy Today Power"
+      device_class: power
+      unit_of_measurement: "kW"
+      slave: 1
+      address: 2074
+      data_type: int16
+      input_type: holding
+      scale: 0.1
+      offset: 0
+      precision: 1
+
+    - name: "Chisage Grid Sell Today Power"
+      device_class: power
+      unit_of_measurement: "W"
+      slave: 1
+      address: 2077
+      data_type: int16
+      input_type: holding
+      scale: 0.1
+      offset: 0
+      precision: 1
+
+    - name: "Chisage Load Today Power"
+      device_class: power
+      unit_of_measurement: "kW"
+      slave: 1
+      address: 2080
+      data_type: int16
+      input_type: holding
+      scale: 0.1
+      offset: 0
+      precision: 1
+
+    - name: "Chisage Battery Day Charge"
+      device_class: energy_storage
+      unit_of_measurement: "kWh"
+      state_class: total_increasing
+      slave: 1
+      address: 2068
+      data_type: uint16
+      input_type: holding
+      scale: 0.1
+      offset: 0
+      precision: 1
+
+    # 2071 Day Battery Discharge
+    - name: "Chisage Battery Day Discharge"
+      device_class: energy_storage
+      unit_of_measurement: "kWh"
+      state_class: total_increasing
+      slave: 1
+      address: 2071
+      data_type: uint16
+      input_type: holding
+      scale: 0.1
+      offset: 0
+      precision: 1
