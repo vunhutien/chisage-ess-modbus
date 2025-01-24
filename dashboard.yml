@@ -1,0 +1,116 @@
+views:
+  - title: Home
+    sections:
+      - type: grid
+        cards:
+          - type: custom:sunsynk-power-flow-card
+            cardstyle: compact
+            show_solar: true
+            inverter:
+              modern: true
+              autarky: 'no'
+              auto_scale: false
+              model: sunsynk
+            battery:
+              show: true
+              shutdown_soc: 1
+              show_daily: true
+              invert_power: false
+              colour:
+                - 255
+                - 123
+                - 0
+              dynamic_colour: false
+              linear_gradient: true
+              animate: true
+              show_remaining_energy: true
+              hide_soc: false
+              auto_scale: false
+              show_absolute: true
+              count: 1
+              invert_flow: false
+              soc_end_of_charge: 100
+            solar:
+              show_daily: true
+              mppts: 2
+              pv1_name: PV1
+              pv2_name: PV2
+              dynamic_colour: false
+              colour:
+                - 5
+                - 122
+                - 29
+            load:
+              show_daily: true
+              dynamic_icon: true
+              dynamic_colour: false
+              show_aux: true
+              aux_name: Backup
+              show_daily_aux: true
+              invert_load: false
+              colour:
+                - 0
+                - 138
+                - 224
+              essential_name: HOME
+              additional_loads: 2
+              load1_name: UPS
+              load2_name: HOME
+            grid:
+              show_daily_buy: true
+              show_daily_sell: true
+              show_nonessential: false
+              invert_grid: true
+              additional_loads: 2
+              auto_scale: true
+              show_absolute: true
+              colour:
+                - 199
+                - 0
+                - 0
+              invert_flow: true
+              grid_name: EVN
+            entities:
+              inverter_voltage_154: sensor.chisage_inverter_voltage
+              load_frequency_192: sensor.chisage_inverter_frequency
+              inverter_current_164: sensor.chisage_inverter_current
+              inverter_status_59: none
+              inverter_power_175: sensor.chisage_inverter_power
+              day_battery_charge_70: sensor.chisage_battery_day_charge
+              day_battery_discharge_71: sensor.chisage_battery_day_discharge
+              battery_voltage_183: sensor.chisage_battery_voltage
+              battery_soc_184: sensor.chisage_battery_soc
+              battery_power_190: sensor.chisage_battery_power
+              battery_current_191: sensor.chisage_battery_current
+              grid_power_169: sensor.chisage_grid_power
+              day_grid_import_76: sensor.chisage_grid_buy_today_power
+              day_grid_export_77: sensor.chisage_grid_sell_today_power
+              essential_power: sensor.chisage_home_power
+              nonessential_power: none
+              day_pv_energy_108: sensor.chisage_pv_today_power
+              pv_total: sensor.chisage_solar_power
+              pv1_power_186: sensor.chisage_pv1_power
+              pv2_power_187: sensor.chisage_pv2_power
+              pv1_voltage_109: sensor.chisage_pv1_voltage
+              pv1_current_110: sensor.chisage_pv1_current
+              pv2_voltage_111: sensor.chisage_pv2_voltage
+              pv2_current_112: sensor.chisage_pv2_current
+              radiator_temp_91: sensor.chisage_inverter_temperature
+              dc_transformer_temp_90: sensor.chisage_inverter_radiator_temperature
+              remaining_solar: sensor.forecast_remaining_today
+              energy_cost: none
+              grid_ct_power_172: sensor.chisage_grid_power
+              grid_voltage: sensor.chisage_grid_voltage
+              day_load_energy_84: sensor.chisage_load_today_power
+              essential_load1: sensor.chisage_ups_power
+              essential_load2: sensor.chisage_load_active_power
+              battery_temp_182: sensor.chisage_battery_temperature
+              battery_rated_capacity: sensor.chisage_battery_capacity
+            grid_options:
+              rows: auto
+              columns: full
+            show_grid: true
+            show_battery: true
+            dynamic_line_width: true
+            large_font: true
+            wide: false
