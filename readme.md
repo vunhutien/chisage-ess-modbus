@@ -8,8 +8,7 @@ Mình đã sử dụng Chisage ESS Hybrid 6kw được khoảng 1 tháng, đánh
 - Waveshare RS485 to ETH (B) hoặc RS485 to POE ETH (B) (có thể dùng RS485 to WIFI nhưng giá đắt hơn, mình chỉ có bản dùng dây nên tận dụng luôn)
 
 # Sơ đồ đấu nối
-
-https://prnt.sc/2_JyPX2LfgOI
+![image](https://github.com/user-attachments/assets/114e8771-5f3e-4dcb-b579-ac593493d97f)
 
 - Dây LAN thứ 1: Cắm cổng RS485 (cổng dây mạng) từ Waveshare vào router hay switch mạng nhà bạn.
 - Dây Lan thứ 2: cắm 1 đầu vào cổng MODBUS của biến tần, đầu còn lại cắt ra lấy 2 dây số 1 và 2 đấu vào cổng A và B của Waveshare.
