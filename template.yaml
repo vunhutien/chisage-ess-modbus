@@ -1,17 +1,17 @@
 ############################## TEMPLATES FOR MODBUS INVERTER ##############################
-  - sensor:
+- sensor:
 # Sum of PV1 and PV2 to get total PV Power
-      - name: "Chisage Solar Power"
-        unit_of_measurement: "W"
-        state: >-
-          {{ (states('sensor.chisage_pv1_power') | float + states('sensor.chisage_pv2_power') | float) | round(0) }}
-        device_class: power
-        state_class: measurement
+    - name: "Chisage Solar Power"
+      unit_of_measurement: "W"
+      state: >-
+        {{ (states('sensor.chisage_pv1_power') | float + states('sensor.chisage_pv2_power') | float) | round(0) }}
+      device_class: power
+      state_class: measurement
 
 # Sum of UPS and LOAD to get total Home Usage
-      - name: "Chisage Home Power"
-        unit_of_measurement: "W"
-        state: >-
-          {{ (states('sensor.chisage_ups_power') | float + states('sensor.chisage_load_active_power') | float) | round(0) }}
-        device_class: power
-        state_class: measurement
+    - name: "Chisage Home Power"
+      unit_of_measurement: "W"
+      state: >-
+        {{ (states('sensor.chisage_ups_power') | float + states('sensor.chisage_load_active_power') | float) | round(0) }}
+      device_class: power
+      state_class: measurement
